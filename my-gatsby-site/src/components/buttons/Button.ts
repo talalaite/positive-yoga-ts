@@ -15,9 +15,9 @@ interface Styles {
 
 export const Button = styled.button<Styles>`
   display: inline-block;
-  margin: ${(props) => props.margin || 'auto'};
-  padding: ${(props) => props.padding || '0.8rem 1.5rem'};
-  max-width: ${(props) => props.maxWidth || '16rem'};
+  margin: ${({ margin }) => margin || 'auto'};
+  padding: ${({ padding }) => padding || '0.8rem 1.5rem'};
+  max-width: ${({ maxWidth }) => maxWidth || '16rem'};
   min-width: ${({ minWidth }) => minWidth || 'none'};
   width: ${({ width }) => width || '100%'};
   font-size: ${({ fontSize }) => fontSize || '1rem'};
