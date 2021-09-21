@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-// import { white } from "styles/colors.js";
+import { primary, white } from 'styles/colors';
 
 interface Styles {
   margin?: string;
@@ -21,10 +21,9 @@ export const Button = styled.button<Styles>`
   min-width: ${({ minWidth }) => minWidth || 'none'};
   width: ${({ width }) => width || '100%'};
   font-size: ${({ fontSize }) => fontSize || '1rem'};
-  background-color: ${({ backgroundColor }) =>
-    backgroundColor || 'transparent'};
+  background-color: ${({ backgroundColor }) => backgroundColor || primary};
   border: none;
   border-radius: ${({ borderRadius }) => borderRadius || '0.5rem'};
-  color: ${({ color }) => color || 'white'};
+  color: ${({ color }) => color || white};
   cursor: pointer;
 `;

@@ -1,12 +1,12 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "gatsby";
+import React from 'react';
+import styled from 'styled-components';
+import { Link } from 'gatsby';
 
-import { useRouter } from "apis/history";
+import { useRouter } from 'apis/history';
 
-import { useQuery } from "styles/breakpoints";
+import { useQuery } from 'styles/breakpoints';
 
-import { Button, Image, PrimaryButton } from "components";
+import { Button, Image, PrimaryButton } from 'components';
 
 const Checkout = () => {
   const { isMobile, isTablet } = useQuery();
@@ -17,11 +17,7 @@ const Checkout = () => {
       checkout
       <Link to="/">{isMobile && <Button>Landing page</Button>}</Link>
       <Link to="/">{isTablet && <Button>Click</Button>}</Link>
-      {isTablet && (
-        <PrimaryButton color="black" onClick={goToLanding}>
-          Primary
-        </PrimaryButton>
-      )}
+      {isTablet && <PrimaryButton onClick={goToLanding}>Primary</PrimaryButton>}
       <Image src="photo" />
     </SectionWrapper>
   );
